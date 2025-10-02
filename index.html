@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css">
+<title>Call Break — Full Auto Board || Darpan Adhikari</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h2 style="text-align:center;margin:6px 0">Call Break — Setup</h2>
+
+    <div class="row">
+      <input type="text" id="p0" placeholder="Player 1" value="P1">
+      <input type="text" id="p1" placeholder="Player 2" value="P2">
+      <input type="text" id="p2" placeholder="Player 3" value="P3">
+      <input type="text" id="p3" placeholder="Player 4" value="P4">
+    </div>
+
+    <div class="row muted">Enter 3 bet amounts (they will be sorted → highest, 2nd, lowest)</div>
+    <div class="row">
+      <input id="b1" type="number" placeholder="Amt A" value="50"
+             onwheel="this.blur()" onkeydown="if(event.key==='ArrowUp'||event.key==='ArrowDown'){event.preventDefault();}">
+      <input id="b2" type="number" placeholder="Amt B" value="40"
+             onwheel="this.blur()" onkeydown="if(event.key==='ArrowUp'||event.key==='ArrowDown'){event.preventDefault();}">
+      <input id="b3" type="number" placeholder="Amt C" value="30"
+             onwheel="this.blur()" onkeydown="if(event.key==='ArrowUp'||event.key==='ArrowDown'){event.preventDefault();}">
+    </div>
+
+    <div class="row">
+      <button class="btn" onclick="start()">Start Game</button>
+      <button class="btn" style="background:#6b7280" onclick="resetAll()">Reset All</button>
+    </div>
+  </div>
+
+  <div id="gamesArea"></div>
+</div>
+<footer>
+    <span
+        ><i>&copy;</i><span id="date"></span
+        ><a href="https://darpanadhikari.com.np" target="_blank">
+        DarpanAdhikari</a
+        >
+        || All right reserved</span
+    >
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
